@@ -47,7 +47,7 @@ class Song
     data = /(?<artist>.+)\s-\s(?<song>.+).mp3/.match(filename)
     song = data[:song]
     artist = data[:artist]
-    self.new_by_name(song)
+    self.create_by_name(song)
     self.find_by_name(song).artist_name  = artist
   end
 
