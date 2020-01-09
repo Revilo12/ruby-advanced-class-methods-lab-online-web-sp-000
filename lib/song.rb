@@ -50,4 +50,8 @@ class Song
     song #returns the song
   end
 
+  def self.destroy_all
+    self.all.clear
+  end
+
 end
