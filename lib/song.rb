@@ -44,12 +44,10 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    data = /(?<artist>.+)\s-\s(?<song>.+).mp3/.match(filename)
-    song = data[:song]
-    artist = data[:artist]
-    song = self.new_by_name(song)
-    song.artist_name = artist
-    song
+    data = /(?<artist>.+)\s-\s(?<song>.+).mp3/.match(filename) #patses looking for the artist and the song
+    song = self.new_by_name(data[:song]) #makes a new song with the found name
+    song.artist_name = data[:artist] #adds the artist name onto the song created
+    song #returns the song
   end
 
 end
