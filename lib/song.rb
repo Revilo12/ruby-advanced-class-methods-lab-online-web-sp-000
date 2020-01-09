@@ -49,6 +49,7 @@ class Song
     artist = data[:artist]
     song = self.new_by_name(song)
     song.artist_name = artist
+    song
   end
 
 end
