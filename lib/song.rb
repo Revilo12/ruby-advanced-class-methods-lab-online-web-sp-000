@@ -48,7 +48,7 @@ class Song
     song = data[:song]
     artist = data[:artist]
     self.new_by_name(song)
-    self.artist_name  = artist
+    self.find_by_name(song).artist_name  = artist
   end
 
 end
